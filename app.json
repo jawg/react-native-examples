@@ -1,0 +1,10 @@
+{
+  "name": "reactnativeexamples",
+  "displayName": "reactnativeexamples",
+  "android": {
+    "package": "com.jawg.demo"
+  },
+  "ios": {
+    "bundleIdentifier": "com.jawg.demo"
+  }
+}
