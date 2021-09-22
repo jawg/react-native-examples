@@ -17,3 +17,5 @@ npm start
 # second prompt
 npm run [android|web|ios]
 ```
+
+All our examples are located here: [`src/screen/example`](./src/screen/example)

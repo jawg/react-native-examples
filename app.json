@@ -1,6 +1,6 @@
 {
   "name": "reactnativeexamples",
-  "displayName": "reactnativeexamples",
+  "displayName": "Jawg Maps with React Native",
   "android": {
     "package": "com.jawg.demo"
   },

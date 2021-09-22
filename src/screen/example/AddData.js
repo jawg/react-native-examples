@@ -1,5 +1,5 @@
 import React from 'react';
-import {StyleSheet, View, Image} from 'react-native';
+import {StyleSheet, View} from 'react-native';
 import MapLibreGL from '@react-native-mapbox-gl/maps';
 
 import {accessToken} from '../../config';
@@ -21,7 +21,7 @@ const styles = StyleSheet.create({
   },
 });
 
-const AddMarker = () => {
+const AddData = () => {
   return (
     <View style={styles.page}>
       <View style={styles.container}>
@@ -33,37 +33,18 @@ const AddMarker = () => {
           styleURL={`https://api.jawg.io/styles/jawg-sunny.json?access-token=${accessToken}`}>
           <MapLibreGL.Camera
             defaultSettings={{
-              centerCoordinate: [2.3210938, 48.8565913],
-              zoomLevel: 5,
+              centerCoordinate: [2.3488, 48.8534],
+              zoomLevel: 10,
             }}
           />
-          <MapLibreGL.MarkerView
-            coordinate={[-0.124589, 51.500741]}
-            children={
-              <Image
-                source={{
-                  uri: 'https://www.r7.jawg.io/docs/images/icons/big-ben.png',
-                }}
-                style={{width: 25, height: 25}}
-              />
-            }
-            anchor={{x: 0, y: 0.5}}
-          />
           <MapLibreGL.ShapeSource
-            id="marker-source"
-            shape={{
-              type: 'Feature',
-              geometry: {
-                type: 'Point',
-                coordinates: [2.294694, 48.858093],
-              },
-            }}>
+            id="market-source"
+            url={'https://media.jawg.io/add-your-data/marketplaces.geojson'}>
             <MapLibreGL.SymbolLayer
-              id="marker-layer"
+              id="shop-icon"
               style={{
-                iconImage:
-                  'https://www.jawg.io/docs/images/icons/eiffel-tower.png',
-                iconSize: 0.5,
+                iconImage: 'https://media.jawg.io/add-your-data/shop.png',
+                iconAnchor: 'bottom',
               }}
             />
           </MapLibreGL.ShapeSource>
@@ -73,4 +54,4 @@ const AddMarker = () => {
   );
 };
 
-export default AddMarker;
+export default AddData;

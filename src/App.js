@@ -10,6 +10,7 @@ import Navigation from './util/Navigation.js';
 // happens too often and is not important
 LogBox.ignoreLogs([
   'Mapbox warning Request failed due to a permanent error: stream was reset: CANCEL  {"level": "warning", "message": "Request failed due to a permanent error: stream was reset: CANCEL ", "tag": "Mbgl-HttpRequest"}',
+  'Animated: `useNativeDriver` was not specified. This is a required option and must be explicitly set to `true` or `false`',
 ]);
 
 MapLibreGL.setAccessToken('*');
