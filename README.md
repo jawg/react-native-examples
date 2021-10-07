@@ -6,7 +6,16 @@ Integrating Jawg Maps with React Native
 
 First, make sure to have an emulator or a physical device connected.
 
-Add your access token in the file `./src/config.js`, then open 2 terminals and run : 
+Add your access token and custom style in the file `./src/config.js`: 
+
+```bash
+# Install all dependencies
+npm install
+# For iOS only, install pods before start
+cd ios && pod install 
+```
+
+Then open 2 terminals and run
 
 ```bash
 # first prompt

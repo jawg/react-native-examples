@@ -12,6 +12,10 @@ target 'reactnativeexamples' do
     :hermes_enabled => false
   )
 
+  pre_install do |installer|
+    $RNMBGL.pre_install(installer)
+  end
+
   target 'reactnativeexamplesTests' do
     inherit! :complete
     # Pods for testing
@@ -21,9 +25,10 @@ target 'reactnativeexamples' do
   #
   # Note that if you have use_frameworks! enabled, Flipper will not work and
   # you should disable the next line.
-  use_flipper!()
+  # use_flipper!({ 'Flipper' => '0.114.0' })
 
   post_install do |installer|
     react_native_post_install(installer)
+    $RNMBGL.post_install(installer)
   end
 end
